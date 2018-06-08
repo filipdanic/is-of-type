@@ -1,0 +1,28 @@
+{
+  "name": "is-of-type",
+  "version": "1.0.0",
+  "description": "Various utility functions such as isString, isNumber, isNaN, isNull, isDefined etc.",
+  "main": "readme.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filipdanic/is-of-type.git"
+  },
+  "keywords": [
+    "helper",
+    "utility",
+    "one-liners",
+    "functional"
+  ],
+  "author": "danicfilip.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filipdanic/is-of-type/issues"
+  },
+  "homepage": "https://github.com/filipdanic/is-of-type",
+  "devDependencies": {
+    "tape": "^4.8.0"
+  }
+}
