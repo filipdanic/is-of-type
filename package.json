@@ -1,8 +1,8 @@
 {
   "name": "is-of-type",
   "version": "1.0.0",
-  "description": "Various utility functions such as isString, isNumber, isNaN, isNull, isDefined etc.",
-  "main": "readme.js",
+  "description": "Various utility functions such as isNonEmptyString, isNumber, isNull, isDefined etc.",
+  "main": "index.js",
   "scripts": {
     "test": "tape test.js"
   },

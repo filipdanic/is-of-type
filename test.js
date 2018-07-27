@@ -1,20 +1,21 @@
 const test = require('tape');
 
-const isDefined = require('./readme').isDefined ;
-const isDef = require('./readme').isDef ;
-const isNull = require('./readme').isNull ;
-const isDefinedAndNotNull = require('./readme').isDefinedAndNotNull ;
-const isDefAndNotNull = require('./readme').isDefAndNotNull ;
-const isArray = require('./readme').isArray ;
-const isBoolean = require('./readme').isBoolean ;
-const isBool = require('./readme').isBool ;
-const isFunction = require('./readme').isFunction;
-const isFn = require('./readme').isFn;
-const isObject = require('./readme').isObject ;
-const isString = require('./readme').isString ;
-const isNumber = require('./readme').isNumber ;
-const isNaN = require('./readme').isNaN ;
-const isNumberAndNotNaN = require('./readme').isNumberAndNotNaN;
+const isDefined = require('./index').isDefined ;
+const isDef = require('./index').isDef ;
+const isNull = require('./index').isNull ;
+const isDefinedAndNotNull = require('./index').isDefinedAndNotNull ;
+const isDefAndNotNull = require('./index').isDefAndNotNull ;
+const isArray = require('./index').isArray ;
+const isBoolean = require('./index').isBoolean ;
+const isBool = require('./index').isBool ;
+const isFunction = require('./index').isFunction;
+const isFn = require('./index').isFn;
+const isObject = require('./index').isObject ;
+const isString = require('./index').isString ;
+const isNonEmptyString = require('./index').isNonEmptyString;
+const isNumber = require('./index').isNumber ;
+const isNaN = require('./index').isNaN ;
+const isNumberAndNotNaN = require('./index').isNumberAndNotNaN;
 
 
 test('(un)defined and null checkers work', (t) => {
@@ -52,7 +53,7 @@ test('(un)defined and null checkers work', (t) => {
 });
 
 test('basic isX work', (t) => {
-  t.plan(19);
+  t.plan(22);
 
   t.equal(isArray({}), false);
   t.equal(isArray([]), true);
@@ -79,6 +80,11 @@ test('basic isX work', (t) => {
   t.equal(isString(''), true);
   t.equal(isString('fooo'), true);
   t.equal(isString(11), false);
+
+  t.equal(isNonEmptyString(''), false);
+  t.equal(isNonEmptyString('fooo'), true);
+  t.equal(isNonEmptyString(11), false);
+
   t.end();
 });
 

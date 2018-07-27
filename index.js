@@ -101,6 +101,13 @@ const isObject = (_) => typeof _ === 'object';
  */
 const isString = (_) => typeof _ === 'string';
 
+/**
+ *
+ * @param _
+ * @return {boolean}
+ */
+const isNonEmptyString = (_) => isString(_) && _.length > 0;
+
 exports.isDefined = isDefined;
 exports.isDef = isDefined;
 exports.isNull = isNull;
@@ -114,6 +121,7 @@ exports.isFunction = isFunction;
 exports.isFn = isFn;
 exports.isObject = isObject;
 exports.isString = isString;
+exports.isNonEmptyString = isNonEmptyString;
 
 exports.isNumber = isNumber;
 exports.isNaN = isNaN;
