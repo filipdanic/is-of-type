@@ -4,9 +4,9 @@ A collection of utility functions to help deal with JavaScript’s built-in type
 
 ## Install
 ``` bash
-  `npm install is-of-type --save`
-  # or
-  `yarn add is-of-type`
+`npm install is-of-type --save`
+# or
+`yarn add is-of-type`
 ```
 
 ## Usage
