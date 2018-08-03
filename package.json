@@ -1,6 +1,6 @@
 {
   "name": "is-of-type",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Various utility functions such as isNonEmptyString, isNumber, isNull, isDefined etc.",
   "main": "lib/index.js",
   "scripts": {
