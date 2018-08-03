@@ -1,6 +1,6 @@
 # is-of-type
 
-A collection of utility functions to help deal with JavaScript’s built-in types and add readability to your code.
+A collection of utility functions to help deal with JavaScript’s built-in types and add readability to your code. Only `~417 bytes` when minified and gzipped.
 
 ## Install
 ``` bash
