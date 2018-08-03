@@ -1,20 +1,21 @@
 const test = require('tape');
 
-const isDefined = require('./index').isDefined ;
-const isDef = require('./index').isDef ;
-const isNull = require('./index').isNull ;
-const isDefinedAndNotNull = require('./index').isDefinedAndNotNull ;
-const isDefAndNotNull = require('./index').isDefAndNotNull ;
-const isArray = require('./index').isArray ;
-const isBoolean = require('./index').isBoolean ;
-const isBool = require('./index').isBool ;
+const isDefined = require('./index').isDefined;
+const isDef = require('./index').isDef;
+const isNull = require('./index').isNull;
+const isDefinedAndNotNull = require('./index').isDefinedAndNotNull;
+const isDefAndNotNull = require('./index').isDefAndNotNull;
+const isArray = require('./index').isArray;
+const isNonEmptyArray = require('./index').isNonEmptyArray;
+const isBoolean = require('./index').isBoolean;
+const isBool = require('./index').isBool;
 const isFunction = require('./index').isFunction;
 const isFn = require('./index').isFn;
-const isObject = require('./index').isObject ;
-const isString = require('./index').isString ;
+const isObject = require('./index').isObject;
+const isString = require('./index').isString;
 const isNonEmptyString = require('./index').isNonEmptyString;
-const isNumber = require('./index').isNumber ;
-const isNaN = require('./index').isNaN ;
+const isNumber = require('./index').isNumber;
+const isNaN = require('./index').isNaN;
 const isNumberAndNotNaN = require('./index').isNumberAndNotNaN;
 
 
@@ -53,10 +54,15 @@ test('(un)defined and null checkers work', (t) => {
 });
 
 test('basic isX work', (t) => {
-  t.plan(22);
+  t.plan(26);
 
   t.equal(isArray({}), false);
   t.equal(isArray([]), true);
+
+  t.equal(isNonEmptyArray([]), false);
+  t.equal(isNonEmptyArray({}), false);
+  t.equal(isNonEmptyArray([1]), true);
+  t.equal(isNonEmptyArray([1, 2, 3]), true);
 
   t.equal(isBoolean(1), false);
   t.equal(isBoolean('true'), false);

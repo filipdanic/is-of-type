@@ -72,6 +72,13 @@ const isNumberAndNotNaN = (_) => isNumber(_) && !isNaN(_);
 const isArray = (_) => Array.isArray(_);
 
 /**
+ *
+ * @param {*} _
+ * @return {boolean}
+ */
+const isNonEmptyArray = (_) => isArray(_) && _.length > 0;
+
+/**
  * @param {*} _
  * @returns {boolean}
  */
@@ -115,6 +122,7 @@ exports.isDefinedAndNotNull = isDefinedAndNotNull;
 exports.isDefAndNotNull = isDefinedAndNotNull;
 
 exports.isArray = isArray;
+exports.isNonEmptyArray = isNonEmptyArray;
 exports.isBoolean = isBoolean;
 exports.isBool = isBoolean;
 exports.isFunction = isFunction;
