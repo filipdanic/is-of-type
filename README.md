@@ -64,6 +64,7 @@ This package exports the following utilities:
 - `isDefinedAndNotNull`
 - `isDefAndNotNull`
 - `isArray`
+- `isNonEmptyArray`
 - `isBoolean` (or `isBool`)
 - `isFunction` (or `isFn`)
 - `isObject`

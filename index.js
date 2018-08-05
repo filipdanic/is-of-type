@@ -2,30 +2,11 @@
  * @fileoverview
  *
  * Install:
- *  `npm install is-of-type --save`
- *   # or
- *  `yarn add is-of-type`
+ *  npm install is-of-type --save #or yarn add is-of-type
  *
  * Usage:
  *  All of the functions exports by this package have the following signature:
  *  fn(arg: Any): boolean
- *
- * This package exports the following utilities and their names should speak for themselves:
- *  - isDefined
- *  - isDef
- *  - isNull
- *  - isDefinedAndNotNull
- *  - isDefAndNotNull
- *  - isArray
- *  - isBoolean
- *  - isBool
- *  - isFunction
- *  - isFn
- *  - isObject
- *  - isString
- *  - isNumber
- *  - isNaN
- *  - isNumberAndNotNaN
  *
  */
 
