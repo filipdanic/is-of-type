@@ -90,11 +90,16 @@ const isObject = (_) => typeof _ === 'object';
 const isString = (_) => typeof _ === 'string';
 
 /**
- *
- * @param _
+ * @param {*} _
  * @return {boolean}
  */
 const isNonEmptyString = (_) => isString(_) && _.length > 0;
+
+/**
+ * @param {*} _
+ * @return {boolean}
+ */
+const isDate = (_) => _ instanceof Date;
 
 exports.isDefined = isDefined;
 exports.isDef = isDefined;
@@ -109,6 +114,7 @@ exports.isBool = isBoolean;
 exports.isFunction = isFunction;
 exports.isFn = isFn;
 exports.isObject = isObject;
+exports.isDate = isDate;
 exports.isString = isString;
 exports.isNonEmptyString = isNonEmptyString;
 

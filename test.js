@@ -12,6 +12,7 @@ const isBool = require('./index').isBool;
 const isFunction = require('./index').isFunction;
 const isFn = require('./index').isFn;
 const isObject = require('./index').isObject;
+const isDate = require('./index').isDate;
 const isString = require('./index').isString;
 const isNonEmptyString = require('./index').isNonEmptyString;
 const isNumber = require('./index').isNumber;
@@ -54,7 +55,7 @@ test('(un)defined and null checkers work', (t) => {
 });
 
 test('basic isX work', (t) => {
-  t.plan(26);
+  t.plan(32);
 
   t.equal(isArray({}), false);
   t.equal(isArray([]), true);
@@ -74,6 +75,13 @@ test('basic isX work', (t) => {
 
   t.equal(isObject([]), true);
   t.equal(isObject({}), true);
+  t.equal(isObject(null), true);
+  t.equal(isObject(''), false);
+  t.equal(isObject(1), false);
+  t.equal(isObject(true), false);
+
+  t.equal(isDate(new Date()), true);
+  t.equal(isDate({}), false);
 
   t.equal(isFunction(), false);
   t.equal(isFunction({}), false);
